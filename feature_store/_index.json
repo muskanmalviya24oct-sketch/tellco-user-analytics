@@ -1,0 +1,67 @@
+{
+  "user_overview": {
+    "path": "user_overview.parquet",
+    "format": "parquet",
+    "rows": 106856,
+    "columns": [
+      "sessions",
+      "duration_ms",
+      "total_dl",
+      "total_ul",
+      "Social Media_bytes",
+      "Google_bytes",
+      "Email_bytes",
+      "Youtube_bytes",
+      "Netflix_bytes",
+      "Gaming_bytes",
+      "Other_bytes",
+      "total_data"
+    ],
+    "index_name": "MSISDN",
+    "description": "Per-user session/app aggregates (Task 1)",
+    "updated_at": "2026-10-01T11:26:51.351142+00:00"
+  },
+  "engagement_scores": {
+    "path": "engagement_scores.parquet",
+    "format": "parquet",
+    "rows": 106856,
+    "columns": [
+      "sessions",
+      "duration_ms",
+      "total_data",
+      "cluster"
+    ],
+    "index_name": "MSISDN",
+    "description": "Per-user engagement metrics + cluster (Task 2)",
+    "updated_at": "2026-10-01T11:26:51.494903+00:00"
+  },
+  "experience_scores": {
+    "path": "experience_scores.parquet",
+    "format": "parquet",
+    "rows": 106856,
+    "columns": [
+      "avg_tcp",
+      "avg_rtt",
+      "avg_tput",
+      "handset",
+      "cluster"
+    ],
+    "index_name": "MSISDN",
+    "description": "Per-user experience metrics + cluster (Task 3)",
+    "updated_at": "2026-10-01T11:26:51.677229+00:00"
+  },
+  "satisfaction_scores": {
+    "path": "satisfaction_scores.parquet",
+    "format": "parquet",
+    "rows": 106856,
+    "columns": [
+      "engagement_score",
+      "experience_score",
+      "satisfaction_score",
+      "sat_cluster"
+    ],
+    "index_name": "MSISDN",
+    "description": "Per-user engagement/experience/satisfaction scores (Task 4)",
+    "updated_at": "2026-10-01T11:26:51.840748+00:00"
+  }
+}

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telco-analytics"
+version = "0.1.0"
+description = "Reusable data prep, feature engineering and analysis functions for the TellCo (Nexthikes) user analytics project."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "scikit-learn>=1.1",
+    "pyarrow>=10.0",
+]
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.25", "matplotlib>=3.5", "seaborn>=0.12"]
+test = ["pytest>=7.0"]
+tracking = ["mlflow>=2.0", "sqlalchemy>=2.0", "pymysql>=1.0"]
+
+[tool.setuptools.packages.find]
+include = ["telco_analytics*"]
